@@ -30,7 +30,7 @@ public class Product extends Auditable{
     private String category;
     private Double price;
 
-    @OneToMany(mappedBy = "product", cascade = CascadeType.ALL,fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "product",fetch = FetchType.LAZY)
     private List<ProductSize> sizes ;
 
     @OneToMany(mappedBy = "product", cascade = CascadeType.ALL,fetch = FetchType.LAZY)
