@@ -30,13 +30,13 @@ public class Product extends Auditable{
     private String category;
     private Double price;
 
-    @OneToMany(mappedBy = "product", cascade = CascadeType.ALL,fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "product", cascade = CascadeType.ALL,fetch = FetchType.LAZY)
     private List<ProductSize> sizes ;
 
-    @OneToMany(mappedBy = "product", cascade = CascadeType.ALL,fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "product", cascade = CascadeType.ALL,fetch = FetchType.LAZY)
     private List<Cart> carts;
 
-    @OneToMany(mappedBy = "product", cascade = CascadeType.ALL ,fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "product", cascade = CascadeType.ALL ,fetch = FetchType.LAZY)
     @JsonIgnore
     private List<OrderDetail> orderDetails;
     @Override
